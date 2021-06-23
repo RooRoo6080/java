@@ -1,20 +1,24 @@
 package leetcode;
 
-import java.util.Locale;
-
 public class ValidPalindrome {
     public boolean isPalindrome(String s){
-        String filtered = "";
-        String reversed = "";
+        int start = 0;
+        int end = s.length() - 1;
         String regex = "^[a-z0-9]*$";
-        for (int i = 0; i < s.length(); i++) {
-            String letter = Character.toString(s.charAt(i)).toLowerCase(Locale.ROOT);
-            if (letter.matches(regex)) {
-                filtered = filtered + letter;
-                reversed = letter + reversed;
-            }
+        while (start <= end) {
+            String startVar = Character.toString(Character.toLowerCase(s.charAt(start)));
+            if (startVar.matches(regex)) {
+                String endVar = Character.toString(Character.toLowerCase(s.charAt(end)));
+                if (endVar.matches(regex)) {
+                    if (!startVar.equals(endVar)) {
+                        return false;
+                    }
+                    start ++;
+                    end--;
+                } else end --;
+            } else start++;
         }
-        return filtered.equals(reversed);
+        return true;
     }
 
     public static void main(String[] args){
