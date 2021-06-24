@@ -1,30 +1,28 @@
 public class BinarySearch {
 
-    public int search(int[] arr, int target) throws InterruptedException {
+    public int search(int[] arr, int target) {
         int left = 0;
         int right = arr.length - 1;
-        while (left < right) {
-            int mid = (left + right) / 2;
-            System.out.println(mid);
-            Thread.sleep(500);
-            if (arr[mid] == target) {
+        int mid = (left + right) / 2;
+        while (left <= right) {
+            if (arr[mid] < target) {
+                left = mid + 1;
+            } else if (arr[mid] == target) {
                 return mid;
-            } else if (target < arr[mid]) {
-                right = mid - 1;
             } else{
-                left = mid - 1;
+                right = mid - 1;
             }
-            System.out.println(mid);
+            mid = (left + right) / 2;
         }
         return -1;
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         BinarySearch bs = new BinarySearch();
         double time = System.nanoTime();
-        int[] arrayTwo = {0, 1, 2, 3, 4, 4, 5, 6, 7, 8, 9, 10};
-        int target = 1456;
-        System.out.println(bs.search(arrayTwo, target));
+        int[] array = {0, 1, 2, 3, 4, 4, 5, 6, 7, 8, 9, 10};
+        int target = 9;
+        System.out.println(bs.search(array, target));
         System.out.println((System.nanoTime() - time) / 1000000);
     }
 
