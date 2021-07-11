@@ -12,7 +12,7 @@ public class question2_249 {
             if (!letters.contains(s.charAt(i))) letters.add(s.charAt(i));
             else {
                 for (int j = s.indexOf(s.charAt(i)) + 1; j < i; j++) {
-                    String pal = s.charAt(i) + Character.toString(s.charAt(j)) + s.charAt(i);
+                    String pal = s.charAt(i) + Character.toString(s.charAt(j));
                     if (!palindromes.contains(pal)) count++;
                     palindromes.add(pal);
                 }
