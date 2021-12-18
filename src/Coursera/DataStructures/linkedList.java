@@ -1,4 +1,6 @@
-public class LinkedList {
+package Coursera.DataStructures;
+
+public class linkedList {
     public static class Node {
         Node next;
         int data;
@@ -39,7 +41,6 @@ public class LinkedList {
         Node current = head;
 
         if (head == null) {
-            head = new Node(data);
             return;
         }
 
