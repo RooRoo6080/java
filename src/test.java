@@ -1,5 +1,7 @@
-public class test {
+import java.util.Arrays;
+
+class test {
     public static void main(String[] args) {
-        System.out.println('z' - 97);
+        System.out.println((int) '.');
     }
 }
