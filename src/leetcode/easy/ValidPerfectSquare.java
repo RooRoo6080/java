@@ -1,7 +1,5 @@
 package leetcode.easy;
 
-//a very good solution though not by me
-
 public class ValidPerfectSquare {
     public boolean isPerfectSquare(int num) {
         int i = 1;

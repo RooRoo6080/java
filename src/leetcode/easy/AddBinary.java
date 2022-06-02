@@ -1,5 +1,3 @@
-//not my code
-
 package leetcode.easy;
 
 public class AddBinary {

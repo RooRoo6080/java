@@ -1,5 +1,3 @@
-//not my code
-
 package leetcode.medium;
 
 public class CountPrimes {
