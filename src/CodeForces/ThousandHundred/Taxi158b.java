@@ -1,31 +1,23 @@
 package CodeForces.ThousandHundred;
 
-import java.util.*;
-import java.io.*;
+import java.util.Scanner;
 
 public class Taxi158b {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int[] data = new int[5];
-        int cnt = 0;
-
-        int n = Integer.parseInt(br.readLine());
-        String str = br.readLine();
-        StringTokenizer st = new StringTokenizer(str, " ");
-        while (st.hasMoreTokens())
-            data[Integer.parseInt(st.nextToken())]++;
-
-        cnt = data[4] + data[3] + data[2] / 2;
-        data[1] -= data[3];
-
-        if (data[2] % 2 == 1) {
-            cnt++;
-            data[1] -= 2;
-        }
-
-        if (data[1] > 0)
-            cnt += (data[1] + 3) / 4;
-
-        System.out.println(cnt);
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] groups = new int[5];
+        int taxis = groups[0] = scanner.nextInt();
+        for (int i = 0; i < groups[0]; i++) groups[scanner.nextInt()]++;
+        int min = Math.min(groups[3], groups[1]);
+        taxis -= min;
+        groups[1] -= min;
+        min = groups[2] / 2;
+        taxis -= min;
+        groups[2] -= min * 2;
+        min = Math.min(groups[2] * 2, groups[1]);
+        taxis -= min;
+        groups[1] -= min;
+        taxis -= groups[1] - ((groups[1] + 3) / 4);
+        System.out.println(taxis);
     }
 }
