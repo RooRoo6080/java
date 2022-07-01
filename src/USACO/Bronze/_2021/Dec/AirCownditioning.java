@@ -18,21 +18,15 @@ public class AirCownditioning {
                 for (int i = 0; i < n; i++) {
                     if (o[i] != 0) {
                         count++;
-                        if (i > 0) {
-                            if ((o[i - 1] > 0 && o[i] > 0) || (o[i - 1] < 0 && o[i] < 0)) {
-                                count--;
-                            }
+                        if (i < n - 1) if ((o[i + 1] > 0 && o[i] > 0) || (o[i + 1] < 0 && o[i] < 0)) count--;
+                        if (o[i] > 0) {
+                            o[i]--;
+                            if (o[i] == 0) f++;
                         }
-                    }
-                }
-                for (int j = 0; j < n; j++) {
-                    if (o[j] > 0) {
-                        o[j]--;
-                        if (o[j] == 0) f++;
-                    }
-                    else if (o[j] < 0) {
-                        o[j]++;
-                        if (o[j] == 0) f++;
+                        else if (o[i] < 0) {
+                            o[i]++;
+                            if (o[i] == 0) f++;
+                        }
                     }
                 }
             }
