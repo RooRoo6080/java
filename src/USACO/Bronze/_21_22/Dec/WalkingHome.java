@@ -1,4 +1,4 @@
-package USACO.Bronze._2021.Dec;
+package USACO.Bronze._21_22.Dec;
 
 import java.io.File;
 import java.io.IOException;
@@ -7,8 +7,8 @@ import java.util.Scanner;
 public class WalkingHome {
     public static void main(String[] args) throws IOException {
         for (int r = 1; r < 11; r++) {
-            Scanner scanner = new Scanner(new File("src/USACO/Bronze/_2021/Dec/prob3_bronze_dec21/" + r + ".in"));
-            Scanner check = new Scanner(new File("src/USACO/Bronze/_2021/Dec/prob3_bronze_dec21/" + r + ".out"));
+            Scanner scanner = new Scanner(new File("src/USACO/Bronze/_21_22/Dec/prob3_bronze_dec21/" + r + ".in"));
+            Scanner check = new Scanner(new File("src/USACO/Bronze/_21_22/Dec/prob3_bronze_dec21/" + r + ".out"));
             int correct = 0;
             long startTime = System.currentTimeMillis();
             int t = scanner.nextInt();
