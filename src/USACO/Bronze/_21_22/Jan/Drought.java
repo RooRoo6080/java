@@ -2,7 +2,6 @@ package USACO.Bronze._21_22.Jan;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Drought {
