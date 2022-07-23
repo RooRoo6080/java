@@ -25,7 +25,7 @@ public class ClockwiseFence {
                 System.out.println(ans);
                 if (ans.equals(checkAns.next())) c++;
             }
-            if (c == n) System.out.println("CORRECT - " + (System.currentTimeMillis() - startTime) + "ms \n");
+            if (c == n) System.out.println("CORRECT - " + (System.currentTimeMillis() - startTime) + "ms\n");
             else System.out.println("WRONG\n");
         }
     }
