@@ -6,13 +6,13 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class Acowdemia1 {
+public class AcowdemiaI {
     public static void main(String[] args) throws FileNotFoundException {
         for (int rep = 1; rep < 18; rep++) {
             long startTime = System.currentTimeMillis();
             Scanner scanner = new Scanner(new File("src/USACO/Bronze/_20_21/USopen/prob1_bronze_open21/" + rep + ".in"));
             Scanner checkAns = new Scanner(new File("src/USACO/Bronze/_20_21/USopen/prob1_bronze_open21/" + rep + ".out"));
-            int n = scanner.nextInt(), l = scanner.nextInt(), count = 0;
+            int n = scanner.nextInt(), l = scanner.nextInt();
             Integer[] papers = new Integer[n];
             for (int i = 0; i < n; i++) papers[i] = scanner.nextInt();
             Arrays.sort(papers, Collections.reverseOrder());
