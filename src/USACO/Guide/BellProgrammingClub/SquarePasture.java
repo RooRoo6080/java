@@ -1,4 +1,4 @@
-package USACO.Guide;
+package USACO.Guide.BellProgrammingClub;
 
 import java.io.IOException;
 import java.util.Arrays;
