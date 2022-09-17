@@ -1,11 +1,9 @@
-package USACO.Guide.Bronze;
+package USACO;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Scanner;
+import java.util.*;
+import java.io.*;
 
-public class FencePainting {
+public class Main {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(new File("paint.in"));
         FileWriter writer = new FileWriter("paint.out");
