@@ -2,21 +2,34 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
-    public static int interArea(int[] s1, int[] s2) {
-        return ((s1[3] - s1[1]) * (s1[2] - s1[0]) - ((Math.min(s1[2], s2[2]) - Math.max(s1[0], s2[0]))
-                * (Math.min(s1[3], s2[3]) - Math.max(s1[1], s2[1]))));
-    }
-
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(new File("billboard.in"));
         FileWriter writer = new FileWriter("billboard.out");
-        int[][] b = new int[3][4];
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 4; j++) {
-                b[i][j] = scanner.nextInt();
-            }
+        int ans = 0;
+        boolean[][] view = new boolean[2001][2001];
+        for (int i = 0; i < 2; i++) {
+            int x1 = scanner.nextInt() + 1000;
+            int y1 = scanner.nextInt() + 1000;
+            int x2 = scanner.nextInt() + 1000;
+            int y2 = scanner.nextInt() + 1000;
+            for (int k = x1; k < x2; k++)
+                for (int l = y1; l < y2; l++)
+                    view[k][l] = true;
         }
-        writer.write(String.valueOf(interArea(b[0], b[2]) + interArea(b[1], b[2])));
+        int x1 = scanner.nextInt() + 1000;
+        int y1 = scanner.nextInt() + 1000;
+        int x2 = scanner.nextInt() + 1000;
+        int y2 = scanner.nextInt() + 1000;
+        for (int i = x1; i < x2; i++)
+            for (int j = y1; j < y2; j++)
+                view[i][j] = false;
+
+        for (int i = 0; i <= 2000; i++)
+            for (int j = 0; j < 2000; j++)
+                if (view[i][j])
+                    ans++;
+
+        writer.write(String.valueOf(ans));
         writer.close();
     }
 }
