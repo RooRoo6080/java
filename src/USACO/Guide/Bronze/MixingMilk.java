@@ -1,7 +1,11 @@
-import java.util.*;
-import java.io.*;
+package USACO.Guide.Bronze;
 
-public class Main {
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class MixingMilk {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(new File("mixmilk.in"));
         FileWriter writer = new FileWriter("mixmilk.out");
@@ -18,7 +22,7 @@ public class Main {
             milk[a] -= transfer;
             milk[b] += transfer;
         }
-        for (int i : milk) writer.write(i + "\n");
+        for (int i : milk) writer.write(i + " ");
         writer.close();
     }
 }
