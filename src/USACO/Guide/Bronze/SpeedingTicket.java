@@ -1,7 +1,12 @@
-import java.util.*;
-import java.io.*;
+package USACO.Guide.Bronze;
 
-public class Main {
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class SpeedingTicket {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(new File("speeding.in"));
         FileWriter writer = new FileWriter("speeding.out");
