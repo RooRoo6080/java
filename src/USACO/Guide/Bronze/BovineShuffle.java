@@ -10,7 +10,7 @@ public class BovineShuffle {
         Scanner scanner = new Scanner(new File("shuffle.in"));
         FileWriter writer = new FileWriter("shuffle.out");
         int n = scanner.nextInt();
-        int[] shuffle = new int[n + 1];
+        int[] shuffle = new int[n + 1]; 
         for (int i = 1; i <= n; i++) shuffle[scanner.nextInt()] = i;
         int[] curr = new int[n + 1];
         for (int i = 1; i <= n; i++) curr[i] = scanner.nextInt();
@@ -20,7 +20,7 @@ public class BovineShuffle {
             for(int j = 1; j <= 3; j++) c = shuffle[c];
             orig[c] = curr[i];
         }
-        for (int i : orig) writer.write(i + "\n");
+        for (int i = 1; i < orig.length; i++) writer.write(orig[i] + "\n");
         writer.close();
     }
 }
