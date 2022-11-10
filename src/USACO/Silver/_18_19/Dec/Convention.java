@@ -1,7 +1,12 @@
-import java.util.*;
-import java.io.*;
+package USACO.Silver._18_19.Dec;
 
-public class Main {
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Convention {
     public static boolean check (int i, int[] t, int m, int c) {
         int b = 1;
         for (int j = 1; j < t.length; j++) {
