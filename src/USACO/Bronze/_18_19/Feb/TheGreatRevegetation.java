@@ -10,7 +10,7 @@ public class TheGreatRevegetation {
         Scanner scanner = new Scanner(new File("revegetate.in"));
         FileWriter writer = new FileWriter("revegetate.out");
         int n = scanner.nextInt(), m = scanner.nextInt();
-        int[] a = new int[m], b = new int[m], g = new int[n];
+        int[] a = new int[m + 1], b = new int[m + 1], g = new int[n + 1];
         for (int i = 0; i < m; i++) {
             a[i] = scanner.nextInt();
             b[i] = scanner.nextInt();
@@ -20,12 +20,14 @@ public class TheGreatRevegetation {
                 b[i] = t;
             }
         }
-        for (int i = 0; i < n; i++) {
+        for (int i = 1; i <= n; i++) {
             int j;
-            for (j = 0; j < 4; j++) {
+            for (j = 1; j <= 4; j++) {
+                boolean c = true;
                 for (int l = 0; l < m; l++) {
-                    if (b[l] != i || g[a[l]] != j) break;
+                    if (b[l] == i && g[a[l]] == j) c = false;
                 }
+                if (c) break;
             }
             g[i] = j;
             writer.write(String.valueOf(j));
