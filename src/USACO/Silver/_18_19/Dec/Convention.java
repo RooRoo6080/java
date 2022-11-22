@@ -22,8 +22,8 @@ public class Convention {
     }
 
     public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(new File("convention.in"));
-        //Scanner scanner = new Scanner(System.in);
+        //Scanner scanner = new Scanner(new File("convention.in"));
+        Scanner scanner = new Scanner(System.in);
         FileWriter writer = new FileWriter("convention.out");
         int n = scanner.nextInt(), m = scanner.nextInt(), c = scanner.nextInt();
         int[] t = new int[n];
