@@ -1,7 +1,11 @@
-import java.util.*;
-import java.io.*;
+package USACO.Bronze._18_19.USopen;
 
-public class Main {
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
+
+public class MilkFactory {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(new File("factory.in"));
         FileWriter writer = new FileWriter("factory.out");
