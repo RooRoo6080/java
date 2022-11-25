@@ -1,7 +1,13 @@
-import java.util.*;
-import java.io.*;
+package USACO.Bronze._17_18.Dec;
 
-public class Main {
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Scanner;
+
+public class MilkMeasurement {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(new File("measurement.in"));
         FileWriter writer = new FileWriter("measurement.out");
