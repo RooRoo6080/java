@@ -9,7 +9,7 @@ public class Main {
         boolean[] board = new boolean[]{true, true, true};
         String[][] log = new String[n][3];
         for (int i = 0; i < n; i++) log[i] = new String[]{scanner.next(), scanner.next(), scanner.next()};
-        Arrays.sort(log, Comparator.comparing(a -> a[0]));
+        Arrays.sort(log, Comparator.comparing(a -> Integer.parseInt(a[0])));
         for (String[] i : log) {
             if (i[1].equals("Mildred")) {
                 m += Integer.parseInt(i[2]);
