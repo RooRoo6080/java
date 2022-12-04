@@ -1,7 +1,11 @@
-import java.util.*;
-import java.io.*;
+package USACO.Bronze._17_18.Feb;
 
-public class Main {
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Teleportation {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(new File("teleport.in"));
         FileWriter writer = new FileWriter("teleport.out");
