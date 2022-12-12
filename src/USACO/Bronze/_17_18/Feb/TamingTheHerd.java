@@ -1,16 +1,19 @@
-import java.util.*;
-import java.io.*;
+package USACO.Bronze._17_18.Feb;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Scanner;
 
-public class Main {
+public class TamingTheHerd {
     public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(new File("taming.in"));
-        FileWriter writer = new FileWriter("taming.out");
+        //Scanner scanner = new Scanner(new File("taming.in"));
+        Scanner scanner = new Scanner(System.in);
+        //FileWriter writer = new FileWriter("taming.out");
         int n = scanner.nextInt();
         int[] log = new int[n];
         boolean s = true;
         for (int i = 0; i < n; i++) log[i] = scanner.nextInt();
         if (log[0] > 0) {
-            writer.write("-1");
+            System.out.println(-1);
             return;
         }
         for (int i = 1; i < n; i++) {
@@ -25,7 +28,7 @@ public class Main {
                 }
             }
             if (!s) {
-                writer.write("-1");
+                System.out.println(-1);
                 return;
             }
         }
@@ -36,7 +39,8 @@ public class Main {
         }
         if (log[0] == -1 || log[0] == 0) c0++;
 
-        writer.write(c0 + " " + (c1 + c0));
-        writer.close();
+        System.out.println(c0 + " " + (c1 + c0));
+        //writer.write(String.valueOf(1));
+        //writer.close();
     }
 }
