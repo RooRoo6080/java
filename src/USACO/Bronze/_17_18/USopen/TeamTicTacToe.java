@@ -1,10 +1,15 @@
-import java.util.*;
-import java.io.*;
+package USACO.Bronze._17_18.USopen;
 
-public class Main {
+import java.io.IOException;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class TeamTicTacToe {
     public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(new File("tttt.in"));
-        FileWriter writer = new FileWriter("tttt.out");
+        //Scanner scanner = new Scanner(new File("test.in"));
+        Scanner scanner = new Scanner(System.in);
+        //FileWriter writer = new FileWriter("test.out");
         char[] board = new char[9];
         for (int i = 0; i < 9; i++) {
             String s = scanner.next();
@@ -20,8 +25,9 @@ public class Main {
             if (used.size() == 1) ic++;
             if (used.size() == 2) tct++;
         }
+        System.out.println(ic + "\n" + tct);
 
-        writer.write(ic + "\n" + tct);
-        writer.close();
+        //writer.write(String.valueOf(1));
+        //writer.close();
     }
 }
