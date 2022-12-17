@@ -1,7 +1,8 @@
-import java.util.*;
-import java.io.*;
+package USACO.Bronze._21_22.DecRepeat;
 
-public class Main {
+import java.util.Scanner;
+
+public class LonelyPhoto {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
