@@ -1,7 +1,9 @@
-import java.util.*;
-import java.io.*;
+package USACO.Contest.Dec2022;
 
-public class Main {
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class FeedingTheCows {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int t = scanner.nextInt();
@@ -20,24 +22,18 @@ public class Main {
             char[] o = new char[n];
             Arrays.fill(o, '.');
             int r = 0;
-            int[] g = new int[n];
-            int[] h = new int[n];
-            int gm = 0, hm = 0;
-            Arrays.fill(g, 0);
-            Arrays.fill(h, 0);
-
-            for (int j = 0; j < n; j++) {
-                for (int l = 0; l < n; l++) {
-                    if (m[l][j] == 'G') g[j]++;
-                    if (m[l][j] == 'H') h[j]++;
-                }
-                if (g[j] > gm) gm = g[j];
-                if (h[j] > hm) hm = h[j];
-            }
             while (r < n) {
-                gm = 0;
-                hm = 0;
+                int[] g = new int[n];
+                int[] h = new int[n];
+                int gm = 0, hm = 0;
+                Arrays.fill(g, 0);
+                Arrays.fill(h, 0);
+
                 for (int j = 0; j < n; j++) {
+                    for (int l = 0; l < n; l++) {
+                        if (m[l][j] == 'G') g[j]++;
+                        if (m[l][j] == 'H') h[j]++;
+                    }
                     if (g[j] > gm) gm = g[j];
                     if (h[j] > hm) hm = h[j];
                 }
@@ -50,7 +46,6 @@ public class Main {
                                 r++;
                                 o[j] = 'G';
                                 ged = true;
-                                g[j] = 0;
                             }
                         }
                     }
@@ -61,7 +56,6 @@ public class Main {
                                 r++;
                                 o[j] = 'H';
                                 hed = true;
-                                h[j] = 0;
                             }
                         }
                     }
