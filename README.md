@@ -1,3 +1,1 @@
-Some Java programs.
-
-Use them as you need.
+## Includes Leetcode, USACO, Codeforces, and other programs written in Java
