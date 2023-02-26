@@ -1,7 +1,8 @@
-import java.util.*;
-import java.io.*;
+package USACO.Contest.Feb2023;
 
-public class Main {
+import java.util.Scanner;
+
+public class WatchingMooloo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         long n = scanner.nextLong(), k = scanner.nextLong();
