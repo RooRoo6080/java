@@ -3,7 +3,7 @@ package leetcode.medium;
 import java.util.*;
 
 public class SearchSuggestionsSystem1268_Trie {
-    class Trie {
+    static class Trie {
         Trie[] sub = new Trie[26];
         LinkedList<String> suggestion = new LinkedList<>();
     }
