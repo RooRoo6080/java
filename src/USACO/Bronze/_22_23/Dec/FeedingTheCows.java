@@ -1,7 +1,8 @@
-import java.util.*;
-import java.io.*;
+package USACO.Bronze._22_23.Dec;
 
-public class Main {
+import java.util.Arrays;
+import java.util.Scanner;
+public class FeedingTheCows {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int T = scanner.nextInt();
